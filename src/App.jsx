@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 export default function App() {
    return (
       <div className="App">
+        {/* Using context Provider so children components can easily access cart */}
          <ShopContextProvider>
             <Router>
                 {/*--------------Navbar---------------- */}
