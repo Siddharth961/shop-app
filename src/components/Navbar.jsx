@@ -5,7 +5,7 @@ export default function Navbar() {
    // Generated navbar from BootStrap
    return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-         <div className="container-fluid px-5">
+         <div className="container-fluid px-md-5 px-3">
             <Link className="navbar-brand fs-3 " to="/">
                Shopper's Bay
             </Link>

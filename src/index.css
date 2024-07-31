@@ -3,136 +3,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 .flex {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-btn{
+   font-family: 'Courier New', Courier, monospace;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
+    margin: 1rem 0.8rem;
+    background-color: rgba(0, 0, 0, 0.852);
+    color: rgba(255, 255, 255, 0.851);
 }
 
 /* ------------------Utilities End---------------------- */
 
 * {
-   margin: 0;
-   padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-   min-height: 100vh;
-   /* border: 4px solid black; */
+    min-height: 100vh;
+    /* border: 4px solid black; */
 }
 
 #root {
-   position: relative;
-   min-height: 100vh;
-   padding-bottom: 100px;
-   margin: 0;
-   color: #c59d5f;
-   background-color: #f1f5f8;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    margin: 0;
+    color: #c59d5f;
+    background-color: #f1f5f8;
 }
 
 nav {
-   font-family: 'Great Vibes';
-   background-color: black !important;
-   box-shadow: 0px 0px 10px #c59c5f43;
-}
-   
-nav a {
-   font-weight: 600 !important;
+    font-family: 'Great Vibes';
+    background-color: black !important;
+    box-shadow: 0px 0px 10px #c59c5f43;
 }
 
-nav a:hover{
-   color: #c59d5f !important;
+nav a {
+    font-weight: 600 !important;
+}
+
+nav a:hover {
+    color: #c59d5f !important;
 }
 
 .home {
-   flex-direction: column;
+    flex-direction: column;
 }
 .home-header {
-   text-align: center;
-   font-family: 'Great Vibes';
-   font-weight: 700;
-   font-size: 4rem;
-   margin: 1.6rem 0rem;
+    text-align: center;
+    font-family: 'Great Vibes';
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 1.6rem 0rem;
 }
 .product-container {
-   justify-content: space-evenly;
-   flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .product {
-   flex-direction: column;
-   font-family: 'Roboto Mono', monospace;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
-   border-radius: 0.4rem;
-   overflow: hidden;
-   font-size: 1rem;
-   padding-bottom: 1.2rem;
-   margin: 2rem;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
+    border-radius: 0.4rem;
+    overflow: hidden;
+    font-size: 1rem;
+    padding-bottom: 1.2rem;
+    margin: 2rem;
 }
 
 .product .price {
-   font-family: 'Courier New', Courier, monospace;
-   font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
 }
 .product img {
-   max-width: 100%;
+    max-width: 100%;
 }
 
 .product button {
-   font-family: 'Times New Roman', Times, serif;
-   font-size: 1rem;
-   border-radius: 0.4rem;
-   padding: 0rem 1rem;
-   margin-top: 0.4rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    padding: 0rem 1rem;
+    margin-top: 0.4rem;
 }
 
 .cart-container {
-   flex-direction: column;
-   padding: 2rem;
+    flex-direction: column;
+    padding: 2rem;
 }
 
-.cart-header{
-   font-family: 'Great Vibes';  
-   font-weight: 700;
+.cart-header {
+    font-family: 'Great Vibes';
+    font-weight: 700;
 }
 
 .cart-options button {
-   font-family: 'Courier New', Courier, monospace;
-   padding: 0.2rem 0.6rem;
-   border-radius: 0.4rem;
-   margin: 1rem 0.8rem;
-   background-color: rgba(0, 0, 0, 0.852);
-   color: rgba(255, 255, 255, 0.851);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
+    margin: 1rem 0.8rem;
+    background-color: rgba(0, 0, 0, 0.852);
+    color: rgba(255, 255, 255, 0.851);
 }
 
 .cart-item {
-   font-family: 'Roboto Mono', monospace;
-   padding: 1rem;
-   justify-content: space-evenly;
-   border-radius: 0.4rem;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.219);
-   margin: 1.4rem 0rem;
+    font-family: 'Roboto Mono', monospace;
+    padding: 1rem;
+    justify-content: space-evenly;
+    border-radius: 0.4rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.219);
+    margin: 1.4rem 0rem;
 }
 
 .item-info {
-   flex-direction: column;
-   align-items: start;
-   justify-content: space-evenly;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
 }
 
 .item-updater button {
-   padding: 4px 6px;
-   font-size: 0.8rem;
+    padding: 4px 6px;
+    font-size: 0.8rem;
 }
 
-footer {
-   /* margin-top: 4rem; */
-   font-family: 'Courier New', Courier, monospace;
-   background-color: #1b1212f8;
-   padding: 0.8rem;
-   color: whitesmoke;
-   font-size: 0.8rem;
-   text-align: center;
-   /* margin: -200px; */
+.reciept-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.reciept-container i{
    position: absolute;
-   bottom: 0;
-   width: 100%;
+   right: 2%;
+   top: 2%;
+   font-size: 1.6rem;
+   cursor: pointer;
+}
+.reciept-container table {
+    text-align: center;
+    min-width: 50vw;
+    max-width: 70vw;
+    border: 1px solid rgba(0, 0, 0, 0.303);
+    border-radius: 4rem;
+}
+
+table th {
+    border-bottom: 2px dashed #c59d5f;
+    padding: 1rem;
+}
+
+td {
+    color: black;
+    padding: 1rem;
+}
+
+
+footer {
+    /* margin-top: 4rem; */
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1b1212f8;
+    padding: 0.8rem;
+    color: whitesmoke;
+    font-size: 0.8rem;
+    text-align: center;
+    /* margin: -200px; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
