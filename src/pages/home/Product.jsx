@@ -3,11 +3,12 @@ import React from 'react';
 import { ShopContext } from '../../context/cart-context';
 
 export default function Product({data}) {
+   console.log(data)
    const { cart, addToCart } = React.useContext(ShopContext);
    const quantity = cart[data.id]
    return (
       <div className="product col-md-2 col-9 my-4 flex">
-         <img src={placeholder} alt="" />
+         <img src={data.image} alt="" />
          <div className="name fs-5 mb-1 fw-medium">
             {data.name}
          </div>

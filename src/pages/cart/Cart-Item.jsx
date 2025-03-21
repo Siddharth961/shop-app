@@ -5,7 +5,7 @@ export default function CartItem({data}){
     const { cart, addToCart, removeFromCart } = React.useContext(ShopContext)
     return(
         <div className="cart-item col-md-5 col-12 row">
-            <img src={placeholder} alt="" className='item-img col-md-4 col-6'/>
+            <img src={data.image} alt="" className='item-img col-md-4 col-6'/>
             <div className='item-info col-6 flex'>
                 <h5>{data.name}</h5>
                 <h6 > Price : Rs.{data.price}</h6>

@@ -1,47 +1,61 @@
-import React from "react"
-import { ShopContext } from "../../context/cart-context"
-import { products_data } from "../../products"
+import React from "react";
+import { ShopContext } from "../../context/cart-context";
+import { products_data } from "../../products";
 
-export default function Reciept(props){
-    const{cart, checkoutFromCart } = React.useContext(ShopContext)
+export default function Reciept(props) {
+    const { cart, checkoutFromCart } = React.useContext(ShopContext);
 
-    // Creating reciept
-    const reciept_els = products_data.map( product => {
-        if(cart[product.id] > 0){
+    // Calculate total sum
+    let total_sum = 0;
+    const reciept_els = products_data.map(product => {
+        if (cart[product.id] > 0) {
+            const itemTotal = cart[product.id] * product.price;
+            total_sum += itemTotal;
             return (
-                <tr>
+                <tr key={product.id}>
                     <td>{product.name}</td>
                     <td>{cart[product.id]}</td>
-                    <td>{ cart[product.id]*product.price }</td>
+                    <td>{itemTotal}</td>
                 </tr>
-            )
+            );
         }
-        
-        return null
-    })
+        return null;
+    });
 
-    // On confirming order removes reciept element and clear cart list
-    function handleConfirm(){
-        props.handleReciept()
-        checkoutFromCart()
+    // On confirming the order, remove the receipt element and clear the cart list
+    function handleConfirm() {
+        props.handleReciept();
+        checkoutFromCart();
     }
-    return(
+
+    return (
         <div className="reciept-container flex">
-            {/* To only remove the reciept element and NOT clear the list */}
-            <i class="bi bi-x-lg" onClick={props.handleReciept}></i>
+            {/* To only remove the receipt element and NOT clear the list */}
+            <i className="bi bi-x-lg" onClick={props.handleReciept}></i>
             <h2>Thanks for your order</h2>
             <h4 className="my-4">Payment summary</h4>
 
-            <table >
-                <tr>
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                </tr>
-                { reciept_els}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {reciept_els}
+                </tbody>
+                {/* Add the total row at the end */}
+                <tfoot>
+                    <tr>
+                        <td colSpan="2" style={{ textAlign: 'right', fontWeight: 'bold' }}>Total</td>
+                        <td>{total_sum}</td>
+                    </tr>
+                </tfoot>
             </table>
 
-            <button className="my-btn" onClick={ handleConfirm }> Confirm </button>
+            <button className="my-btn" onClick={handleConfirm}>Confirm</button>
         </div>
-    )
+    );
 }
